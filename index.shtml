@@ -1,0 +1,231 @@
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <base href="http://www.soenniksen.dk/iof-datastandard/">
+    <title>Orienteering Interface Standards Project - Data Standard, version 2.0.3</title>
+  </head>
+
+  <body background="compass.gif" link="#009B00" vlink="#4A4AFF">
+    <img src="ioflogo5.gif" align="right">
+<hr size=1 color=#5CB900>
+<font face="Arial OUP,Arial,Tahoma,Helvetica" color="#008000" size="5"><i><b>Orienteering Interface Standards Project</b></i></font>
+<hr size=1 color=#5CB900>
+<table width="100%" cellspacing="10" cellpadding="0" border="0">
+<tr><td width="80%" align="top" valign="left">
+<font face="Arial OUP,Arial,Tahoma,Helvetica" color="#008000" size="4"><b>Data Standard, version 2.0.3</b></font><p>
+
+<font face="Arial OUP,Arial,Tahoma,Helvetica">
+
+<p>
+
+This is the first standard that will be widely implemented by software
+developers including the two EKT system, Emit and Sport Ident.
+<p>
+
+The standard is a total rewrite as a result of the experiences gained
+in the Swedish OLA Project and the development of Condes. Also major
+input have been made by Emit and Sport Ident developers.
+<p>
+
+The changes from version 1.0 includes:
+<ul>
+
+<li>A total rewrite of nearly all elements.
+
+<li>Instead of having several Document Type Declaration (DTD) files
+each holding a small part of the standard and depending on each other
+the DTD is now assembled in a single file.
+
+<li>A number of messages, i.e. specification of the lists to be send
+from one software element to another, have been made. There still are
+some messages missing and they will be developed concurrently with
+demand for them.
+
+<li>Some example files of the messages to exchange have been made.
+
+</ul>
+
+Please read the comments in the DTD file for further information.
+
+
+/Kell Sønnichsen (<a href="mailto:kell@soenniksen.dk">kell@soenniksen.dk</a>)
+
+<p>
+<hr size=1>
+<p>
+
+<h4>IOF Data Standard DTD</h4>
+<a href="datastandard/current/IOFdata.dtd">IOFdata.dtd</a> / <a href="datastandard/current/IOFdata.txt">txt</a>
+
+<h4>Example files</h4>
+
+<h5>EventList</h5>
+
+This list is used to exchange event information for a number of
+events, e.g. fixtures.
+
+<h6><a href="datastandard/current/EventList_example.xml">Example 1</a></h6>
+These are actual events from the Danish fixtures of March 2002.
+
+<h5>ClubList</h5>
+
+This list is used to exchange information of a number of clubs,
+e.g. contact addresses and bank accounts. This could be used by a
+national club register.
+
+<h6><a href="datastandard/current/ClubList_example.xml">Example 1</a></h6>
+
+<h5>CompetitorList</h5>
+
+This list is used to exchange non-event specific information on a
+number of Competitors. This could be used by a national competitor
+register.
+
+<h6><a href="datastandard/current/CompetitorList_example.xml">Example 1</a></h6>
+
+<h5>EntryList</h5>
+
+This list is used to send entries from a single club to an organizer
+of an event.
+
+<h6><a href="datastandard/current/EntryList_example.xml">Example 1</a></h6>
+
+A normal entry list.
+
+<h6><a href="datastandard/current/EntryList_example2.xml">Example 2</a></h6>
+
+A normal entry list using teams for a relay.
+
+<h6><a href="datastandard/current/EntryList_example3.xml">Example 3</a></h6>
+
+An entry list with all information that possibly can be included. Only
+one entry is in the file.
+
+<h6><a href="datastandard/current/EntryList_example4.xml">Example 4</a></h6>
+
+The same as Example 3 but with a team entry for a relay.
+
+<h5>StartList</h5>
+
+This list is used for the start list of an event. In fact it could be
+put on WWW using XSLT (XML Style Language Transformation).
+
+<h6><a href="datastandard/current/StartList_example.xml">Example 1</a></h6>
+
+A normal start list.
+
+<h6><a href="datastandard/current/StartList_example2.xml">Example 2</a></h6>
+
+A normal start list for a relay.
+
+<h5>ResultList</h5>
+
+This list is used for the result list of an event. In fact it could be
+put on WWW using XSLT (XML Style Language Transformation).
+<p>
+
+A result list comes in three types:
+
+<dl>
+<dt><b>complete</b>
+<dd>This is a complete list including all competitors. It should only
+be used after the event.
+<dt><b>snapshot</b>
+<dd>This is also a complete list including all competitors but some
+may not have started yet, others may still be out running. It is a
+snapshot of the current standing.
+<dt><b>delta</b>
+<dd>This is a file containing only the changes since the last file was
+sent. It is also a snapshot.
+</dl>
+
+The last two types are intended to be used for "real time" results
+during the event. The first type is for the final standing after the
+event.
+
+
+<h6><a href="datastandard/current/ResultList_example.xml">Example 1</a></h6>
+
+A result list using competitor IDs. This should only be used if the
+reciever uses the same competitor database and uses the same IDs.<br>
+The list is also a "snapshot" result file.
+
+<h6><a href="datastandard/current/ResultList_example2.xml">Example 2</a></h6>
+
+A result list also using competitor IDs. It looks much the same as
+Example 1 but this is a "delta" result file. Only the changes since
+the last file was sent are included.
+
+<h6><a href="datastandard/current/ResultList_example3.xml">Example 3</a></h6>
+
+A relay result list also using competitor IDs. It is a "snapshot" file
+just as Example 1.
+
+<h5>CourseData</h5>
+
+These data contains courses and controls including starting points and
+finish controls. This defines all the control and course
+information. It is typically exchanged between the course setting
+software and the event software for this to be able to perform punch
+checking. The data also contains information about the position of the
+controls on the map so it can be used by map printing software.
+
+<h6><a href="datastandard/current/CourseData_example1.xml">Example 1</a></h6>
+
+An ordinary event. In fact this is "real" data from Spring Cup.
+
+<h6><a href="datastandard/current/CourseData_example2.xml">Example 2</a></h6>
+
+A relay event. This is also "real" data from Spring Cup. Beware, it is
+a quite big file.
+
+
+
+<h4>Download</h4>
+
+You can download the DTD and example files in one package here:
+<br>
+<a href="datastandard/current/IOFdata-2.0.3.tar.gz">IOFdata-2.0.3.tar.gz</a> (19 kB) | <a href="datastandard/current/IOFdata203.zip">IOFdata203.zip</a> (20 kB)
+<p>
+
+
+</td><td width="20%" align="top" valign="left">
+<font face="Arial OUP,Arial,Tahoma,Helvetica">
+<table width="100%" cellspacing="4" cellpadding="0" border="0">
+
+<tr><td valign="top" align="left"><img src="bullet.gif"></td>
+<td valign="top" align="left"><font face="Arial OUP,Arial,Tahoma,Helvetica"><a href="index.shtml">Project Start Page</a></font></td></tr>
+
+<tr><td valign="top" align="left"><img src="bullet.gif"></td>
+<td valign="top" align="left"><font face="Arial OUP,Arial,Tahoma,Helvetica"><a href="datastandard/index.shtml"><b>IOF Data Standard</b></a></font></td></tr>
+
+<tr><td valign="top" align="left"><img src="bullet.gif"></td>
+<td valign="top" align="left"><font face="Arial OUP,Arial,Tahoma,Helvetica"><a href="msgstandard/index.shtml"><b>IOF Message Standard</b></a></font></td></tr>
+
+<tr><td valign="top" align="left"><img src="bullet.gif"></td>
+<td valign="top" align="left"><font face="Arial OUP,Arial,Tahoma,Helvetica"><a href="history.shtml">Project History</a></font></td></tr>
+
+<tr><td valign="top" align="left"><img src="bullet.gif"></td>
+<td valign="top" align="left"><font face="Arial OUP,Arial,Tahoma,Helvetica"><a href="workorg.shtml">Organization of Work</a></font></td></tr>
+
+<tr><td valign="top" align="left"><img src="bullet.gif"></td>
+<td valign="top" align="left"><font face="Arial OUP,Arial,Tahoma,Helvetica"><a href="news/index.shtml">News Archive</a></font></td></tr>
+
+<tr><td valign="top" align="left"><img src="bullet.gif"></td>
+<td valign="top" align="left"><font face="Arial OUP,Arial,Tahoma,Helvetica"><a href="resources.shtml">Resources on WWW</a></font></td></tr>
+
+</table>
+
+</td></tr>
+</table>
+<hr size=1 color=#5CB900>
+<font size=-1>Copyright © International Orienteering Federation<br>
+[an error occurred while processing this directive]
+Revised: 2002-02-24
+
+</font>
+</font>
+</body>
+</html>
+
