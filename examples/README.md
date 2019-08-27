@@ -1,5 +1,6 @@
 # Example files
 
+> ⚠️ **WARNING:** this page refers to an outdated version of the data standard. [Find here](https://github.com/international-orienteering-federation/datastandard-v3) the latest version
 
 ## EventList
 

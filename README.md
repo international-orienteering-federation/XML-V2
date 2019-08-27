@@ -1,5 +1,7 @@
 # IOF Data Standard, version 2.0.3
 
+> ⚠️ **WARNING:** this is an outdated version of the data standard. [Find here](https://github.com/international-orienteering-federation/datastandard-v3) the latest version
+
 This is the first standard that will be widely implemented by software developers including the two EKT system, Emit and Sport Ident.
 
 The standard is a total rewrite as a result of the experiences gained in the Swedish OLA Project and the development of Condes. Also major input have been made by Emit and Sport Ident developers.
