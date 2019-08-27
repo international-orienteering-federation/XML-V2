@@ -12,4 +12,4 @@ The changes from version 1.0 includes:
 * Some example files of the messages to exchange have been made.
 Please read the comments in the DTD file for further information.
 
-[IOF Data Standard DTD](IOFdata.dtd)
+[IOF Data Standard 2.0.3 DTD](IOFdata.dtd)
