@@ -15,3 +15,38 @@ The changes from version 1.0 includes:
 Please read the comments in the DTD file for further information.
 
 [IOF Data Standard 2.0.3 DTD](IOFdata.dtd)
+
+  The file is organized in a number of sections:
+  - Person
+  - Competitor
+  - Club
+  - Event
+  - Entries
+  - Start List
+  - Result List
+  - Classes
+  - Controls and Courses
+  - "Office" elements, i.e. non-orienteering and generic
+  
+  In the top of each section is a reference to the name of the
+  lists that are meant to be exchanged between different software
+  packages used in an orienteering event.
+  A quick reference to these lists are:
+  - PersonList - rarely used
+  - CompetitorList - "brutto" list, e.g. a national database
+  - RankList - competitors in a ranking list, e.g. World Ranking
+  - ClubList - club database, national or event specific
+  - EventList - used for fixtures
+  - ServiceRequestList - rarely used
+  - EntryList - club ordered entries for an event
+  - StartList - class ordered start list
+  - ResultList - class ordered results, not necessarily complete
+  - ClassData - list of classes, national or event specific
+  - CourseData - list of controls and courses of an event
+  
+  ### Authors:
+ * Stefan Nordmark, SWE
+ * Kell Sønnichsen, DEN
+ * Finn Arildsen, DEN
+  
+  Date: 01-2002
