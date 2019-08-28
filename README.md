@@ -44,9 +44,9 @@ Please read the comments in the DTD file for further information.
   - ClassData - list of classes, national or event specific
   - CourseData - list of controls and courses of an event
   
-  ### Authors:
+  ## Authors:
  * Stefan Nordmark, SWE
  * Kell Sønnichsen, DEN
  * Finn Arildsen, DEN
   
-  Date: 01-2002
+*January 2002*
